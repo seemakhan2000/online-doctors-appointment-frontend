@@ -415,8 +415,8 @@ const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
       
       {/* Image */}
       <td>
-        <img
-  src={d.image}
+       <img
+  src={d.image?.startsWith("http") ? d.image : `${API_URL}/${d.image}`}
   width={40}
   height={40}
   className="rounded-circle"
