@@ -219,8 +219,6 @@ const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
 try {
   data = await res.json();
 } catch {
-  const text = await res.text();
-  console.error("Server returned HTML:", text);
   throw new Error("Server error");
 }
 
