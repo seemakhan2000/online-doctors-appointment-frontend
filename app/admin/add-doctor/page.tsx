@@ -82,7 +82,13 @@ export default function AddDoctorPage() {
 
     const data = await res.json();
 
-    setDoctors(data);
+    // setDoctors(data);
+
+    if (Array.isArray(data)) {
+  setDoctors(data);
+} else {
+  setDoctors([]);
+}
   } catch (error) {
     console.error("Fetch doctors error:", error);
   }
@@ -416,7 +422,7 @@ const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
       {/* Image */}
       <td>
        <img
-  src={d.image?.startsWith("http") ? d.image : `${API_URL}/${d.image}`}
+  src={d.image}
   width={40}
   height={40}
   className="rounded-circle"
