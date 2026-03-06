@@ -80,7 +80,15 @@ export default function AddDoctorPage() {
   try {
     const res = await fetch(`${API_URL}/api/doctors`);
 
-    const data = await res.json();
+    let data;
+
+try {
+  data = await res.json();
+} catch {
+  const text = await res.text();
+  console.error("Server returned HTML:", text);
+  throw new Error("Server error");
+}
 
     // setDoctors(data);
 
@@ -206,7 +214,15 @@ const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
       body: payload
     });
 
-    const data = await res.json();
+    let data;
+
+try {
+  data = await res.json();
+} catch {
+  const text = await res.text();
+  console.error("Server returned HTML:", text);
+  throw new Error("Server error");
+}
 
     if (!res.ok) {
       showToast(data.message || "Failed to add doctor", "error");
