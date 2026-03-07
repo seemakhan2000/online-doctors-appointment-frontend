@@ -28,9 +28,8 @@ export default function MentalHealthDoctorsPage() {
 
       console.log("All doctors from backend:", data);
 
-      const mentalDoctors = data.filter(
-        (doc: Doctor) =>
-          doc.specialization?.toLowerCase().includes("mental health")
+      const mentalDoctors = data.filter((doc: Doctor) =>
+        doc.specialization?.toLowerCase().includes("mental health"),
       );
 
       console.log("Filtered mental health doctors:", mentalDoctors);
@@ -54,14 +53,14 @@ export default function MentalHealthDoctorsPage() {
               <div key={doctor._id} className="col-md-4 mb-4">
                 <div className="card h-100 shadow-sm">
                   <img
-                    src={`${BASE_URL}${doctor.image}`}
+                    src={doctor.image}
                     alt={doctor.name}
                     className="rounded-circle mx-auto d-block mt-3"
                     style={{
                       width: "250px",
                       height: "250px",
                       objectFit: "cover",
-                      border: "2px solid #dee2e6"
+                      border: "2px solid #dee2e6",
                     }}
                   />
 

@@ -221,7 +221,7 @@ export default function DoctorsHomePage() {
                     <div className="card h-100 text-center shadow-sm border-0 rounded-4 hover-shadow p-3 transition hover:shadow-lg hover:scale-105">
                       <div className="position-relative">
                         <img
-                          src={`${BASE_URL}${doctor.image}`}
+                          src={doctor.image}
                           alt={doctor.name}
                           className="rounded-circle mx-auto d-block mt-3 border border-2"
                           style={{

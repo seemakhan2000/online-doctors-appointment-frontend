@@ -90,7 +90,7 @@ try {
   throw new Error("Server error");
 }
 
-    // setDoctors(data);
+   
 
     if (Array.isArray(data)) {
   setDoctors(data);
@@ -146,45 +146,6 @@ try {
   };
 
   // ================= ADD =================
-
-  // const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
-
-  //   e.preventDefault();
-
-  //   const payload = new FormData();
-
-  //   Object.entries(formData).forEach(([key, value]) => {
-  //     if (key === "image" && value) payload.append("image", value);
-  //     else payload.append(key, value as string);
-  //   });
-
-  //   payload.append("availabilitySlots", JSON.stringify(availability));
-
-  //   await fetch(`${API_URL}/api/doctors`, {
-  //     method: "POST",
-  //     body: payload,
-  //   });
-
-  //   showToast("Doctor added", "success");
-
-  //   setFormData({
-  //     name: "",
-  //     specialization: "",
-  //     email: "",
-  //     phone: "",
-  //     experience: "",
-  //     education: "",
-  //     certifications: "",
-  //     languages: "",
-  //     hospital: "",
-  //     image: null,
-  //   });
-
-  //   setPreview(null);
-  //   setAvailability([]);
-  //   fetchDoctors();
-  // };
-
 
 const handleAdd = async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();

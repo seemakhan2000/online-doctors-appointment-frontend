@@ -257,7 +257,7 @@ export default function DoctorProfilePage() {
         <div className="row mb-4 " style={{ marginTop: 55 }}>
           <div className="col-md-4 text-center">
             <img
-              src={`${BASE_URL}${doctor.image}`}
+              src={doctor.image}
               className="rounded-circle"
               style={{ width: 200, height: 200, objectFit: "cover" }}
               alt={doctor.name}

@@ -54,16 +54,16 @@ export default function SkinCareDoctorsPage() {
               <div key={doctor._id} className="col-md-4 mb-4">
                 <div className="card h-100 shadow-sm">
                   <img
-                    src={`${BASE_URL}${doctor.image}`}
-                    alt={doctor.name}
-                    className="rounded-circle mx-auto d-block mt-3"
-                    style={{
-                      width: "250px",
-                      height: "250px",
-                      objectFit: "cover",
-                      border: "2px solid #dee2e6"
-                    }}
-                  />
+  src={doctor.image} 
+  alt={doctor.name}
+  className="rounded-circle mx-auto d-block mt-3"
+  style={{
+    width: "250px",
+    height: "250px",
+    objectFit: "cover",
+    border: "2px solid #dee2e6",
+  }}
+/>
 
                   <div className="card-body text-center">
                     <h5 className="card-title">{doctor.name}</h5>
